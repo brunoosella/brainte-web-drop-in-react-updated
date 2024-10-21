@@ -1,5 +1,24 @@
-language: node_js
-node_js:
-  - stable
-  - node
-cache: npm
+name: CI Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Aquí defines la versión correcta de Node.js
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: npm run build
