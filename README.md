@@ -16,9 +16,9 @@
 ## Install
 
 ```bash
-yarn add braintree-web-drop-in-react
+yarn add braintree-web-drop-in-react-updated
 # or
-npm install braintree-web-drop-in-react
+npm install braintree-web-drop-in-react-updated
 ```
 
 ## Drop-In
@@ -27,7 +27,7 @@ npm install braintree-web-drop-in-react
 
 ```js
 import React from "react";
-import DropIn from "braintree-web-drop-in-react";
+import DropIn from "braintree-web-drop-in-react-updated";
 
 class Store extends React.Component {
   instance;
